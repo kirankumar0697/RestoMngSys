@@ -24,6 +24,12 @@ public class CustRegistrationController {
 	@RequestMapping(value="/registration", method = RequestMethod.POST)
 	public String doRegistration(@RequestBody Customer customer) {
 		String result = custservice.registerCustomer(customer);
+//		ModelAndView mv = new ModelAndView();
+//		if(result == "success")
+//			mv.setViewName("registrationsuccesspage");
+//		else
+//			mv.setViewName("registration");
+//		return mv;
 		return result;
 	}
 }

@@ -37,8 +37,7 @@ public class AdminController {
 	@RequestMapping(value="/login", method = RequestMethod.POST)
 	public ModelAndView validateLogin(Admin admin) throws SQLException{
 		ModelAndView model = new ModelAndView();
-		System.out.println("post login  " + admin);
-		System.out.println("details: " + admin.getAdusrname() + " " + admin.getAdpassword());
+		
 		Admin adm = adservice.isValid(admin);
 		
 		if(adm == null) {
